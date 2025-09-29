@@ -39,7 +39,7 @@ break;
 if (index == 4 || index == 6 || index == 8 || index == 10 || index == 12 || index == 14) {
 previousValue = value;
 }
-else if (index == 5) {
+else if (index == 11) {
 pm1 = 256 * previousValue + value;
 Serial.print("{ ");
 Serial.print("\"pm1\": ");
@@ -47,7 +47,7 @@ Serial.print(pm1);
 Serial.print(" ug/m3");
 Serial.print(", ");
 }
-else if (index == 7) {
+else if (index == 13) {
 pm2_5 = 256 * previousValue + value;
 Serial.print("\"pm2_5\": ");
 Serial.print(pm2_5);
@@ -55,13 +55,13 @@ Serial.print(" ug/m3");
 Serial.print(", ");
 lcd.setCursor(0,1);
     lcd.print("PM 2.5 :");
-    //lcd.print(data.PM_AE_UG_2_5);
+    lcd.print(data.PM_AE_UG_2_5);
     lcd.print(pm2_5 -10);
     lcd.print(" ug/m3");
 
 
 }
-else if (index == 9) {
+else if (index == 15) {
 pm10 = 256 * previousValue + value;
 Serial.print("\"pm10\": ");
 Serial.print(pm10);
